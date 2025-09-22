@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flores Amarillas 💛</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div id="petalBackground"></div>
+    <div class="container" id="app">
+      <!-- Pantalla de bienvenida -->
+      <div id="welcome">
+        <h1>💛 No hay chalas... así que no te preocupes 💛</h1>
+        <p>Antes de recibir tu regalo, responde estas wueadas 😉</p>
+        <button id="startBtn">Empezar</button>
+      </div>
+
+      <!-- Pantalla de preguntas -->
+      <div id="quiz" class="hidden" aria-live="polite">
+        <h2 id="question"></h2>
+
+        <!-- Barra de progreso + contador -->
+        <div class="progress-wrap">
+          <div class="progress-info">
+            <span id="progress-count">0</span> de
+            <span id="progress-total">0</span>
+          </div>
+          <div class="progress-container">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+
+        <div id="options" class="options-grid"></div>
+        <p id="feedback" aria-live="assertive"></p>
+      </div>
+
+      <!-- Pantalla final -->
+      <div id="final" class="hidden">
+        <h1>🌼 Hoshina con mucho cariño: Ten tus flores amarillas 🌼</h1>
+        <img
+          src="image/hoshina.png"
+          alt="Ramo de flores amarillas"
+          class="bouquet"
+        />
+        <p id="finalText"><strong>💛 Tú nunca serás espectadora 💛</strong></p>
+        <div id="surpriseMessage" class="hidden">
+          🌟 Siempre serás primavera, incluso en invierno 🌟
+        </div>
+      </div>
+    </div>
+
+    <!-- Música (pon floraamarilla.mp3 en la carpeta) -->
+    <audio id="bgMusic" preload="auto">
+      <source src="floraamarilla.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="codigo.js"></script>
+  </body>
+</html>
